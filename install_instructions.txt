@@ -1,0 +1,34 @@
+Install instructions
+
+(Android Studio is now the official IDE, but I haven't used it before so I am just going to use eclipse for now)
+
+If you want to just install the application, go to cse481L/testApp/TestApp/bin and copy TestApp.apk to the phone.
+You can then use a file manager to install the app.
+
+
+1. Install SDK
+http://developer.android.com/sdk/installing/index.html?pkg=tools
+
+2. Install the eclipse plugin
+http://developer.android.com/sdk/installing/installing-adt.html
+
+3. Open eclipse, choose a workspace (not the same as cse481L/testApp, causes an error).
+
+4. File,Import, Android, Existing Android Code into Workspace
+
+5. plug in phone
+
+6. Run, run as android application
+
+7. Make sure your phone and computer are on the same wifi
+
+8. Start a server on port 9000 (you can start the python server I put in)
+
+9. Input the computer ip and press start - the phone should connect to the server
+
+
+
+MainActivity.java (in testApp/TestApp/src/com/example/testapp) class is the main code of the application.
+
+activity_main.xml (in testApp/TestApp/res/layout) is what the screen on the application looks like
+

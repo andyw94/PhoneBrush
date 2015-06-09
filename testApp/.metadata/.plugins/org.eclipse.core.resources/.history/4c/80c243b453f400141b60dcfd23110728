@@ -1,0 +1,59 @@
+package com.example.testapp;
+
+import android.support.v7.app.ActionBarActivity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+
+
+public class MainActivity extends ActionBarActivity {
+	
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        
+        final Button start = (Button) findViewById(R.id.start_button);
+        start.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				new Thread(new Runnable() {
+					public void run() {
+			 			Log.i("app", "Hello");
+
+				        String HOST = "192.168.0.104";
+				    	int PORT = 9000;
+				    	Socket socket;
+				    	PrintWriter out;
+
+				    	try {
+				 			Log.i("thread2", "trying");
+				 			
+				 			socket = new Socket(HOST, PORT);
+				
+				 			out = new PrintWriter(socket.getOutputStream(), true);
+				             
+				 			//BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+				                 			
+
+							out.print("Clicked");
+				
+				 		} catch (UnknownHostException e) {
+				 			Log.e("thread2", "ERROR");
+				 			e.printStackTrace();
+				 		} catch (IOException e) {
+				 			Log.e("thread2", "ERROR");
+				 			e.printStackTrace();
+				 		}
+				    }
+				}).start();
+			}
+		});
+    }
+
+    
+    
+}

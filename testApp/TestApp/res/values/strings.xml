@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <string name="app_name">TestApp</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+	<string name="send_button">Send</string>
+	<string name="config_button">Config</string>
+	<string name="draw_button">Draw</string>
+	<string name="clear_button">Clear</string>
+	<string name="thickness_value">Thickness: 5</string>
+	<string name="pop_up_text">Pop Up Text</string>
+</resources>
